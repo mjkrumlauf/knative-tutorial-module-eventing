@@ -93,10 +93,10 @@ When you xref:{eventing-repo}#eventing-watch-logs[watch logs], you will notice t
 
 Run the following command to create the Knative service that will be used as the subscriber for the cron events:
 
-.link:{github-repo}/{eventing-repo}/eventing-hello-sink.yaml[eventing-hello-sink.yaml]
+.link:{github-repo}/{eventing-repo}/eventinghello-sink.yaml[eventinghello-sink.yaml]
 [source,yaml,subs="attributes+,+macros"]
 ----
-include::ROOT:example$eventing/eventing-hello-sink.yaml[]
+include::ROOT:example$eventing/eventinghello-sink.yaml[]
 ----
 
 [#eventing-deploy-sink-service]
@@ -105,8 +105,8 @@ include::ROOT:example$eventing/eventing-hello-sink.yaml[]
 Run the following commands to create the service:
 
 :doc-sec: deploy-sink-service
-:url: {github-repo}/{eventing-repo}/eventing/eventing-hello-sink.yaml
-:url-alt-text: eventing-hello-sink.yaml
+:url: {github-repo}/{eventing-repo}/eventing/eventinghello-sink.yaml
+:url-alt-text: eventinghello-sink.yaml
 include::ROOT:partial$deploy-knative-resources.adoc[]
 
 [#eventing-create-event-source]
@@ -160,5 +160,5 @@ include::partial$knative-objects.adoc[tag=knative-event-services]
 [source,bash,subs="+macros,+attributes"]
 ----
 kubectl -n {tutorial-namespace} delete -f eventinghello-source.yaml
-kubectl -n {tutorial-namespace} delete -f eventing-hello-sink.yaml
+kubectl -n {tutorial-namespace} delete -f eventinghello-sink.yaml
 ----
